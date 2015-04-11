@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F5392D2-252C-46DD-995A-3EAE3AE0EEC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartParts</RootNamespace>
+    <AssemblyName>SmartParts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Spiele\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPAPIExtensions">
+      <HintPath>lib\KSPAPIExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Spiele\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\AGXInterface.cs" />
+    <Compile Include="Source\Altimeter.cs" />
+    <Compile Include="Source\FuelController.cs" />
+    <Compile Include="Source\Helper.cs" />
+    <Compile Include="Source\RadioControl.cs" />
+    <Compile Include="Source\Stager.cs" />
+    <Compile Include="Source\Timer.cs" />
+    <Compile Include="Source\Utility.cs" />
+    <Compile Include="Source\Valve.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\B1.cfg" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\B2.cfg" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\B3.cfg" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\B4.cfg" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\breaker.tga" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Breakers\fuel-breaker.mu" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Controller\breaker-complete.tga" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Controller\km_fuel_controller.cfg" />
+    <None Include="GameData\SmartParts\Parts\Fuel-Controller\km_fuel_controller.mu" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_altimeter.cfg" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_alt_low.mu" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_fuel.cfg" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_fuel.mu" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_radio.cfg" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_radio.mu" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_time.cfg" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\km_smart_time.mu" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\smart-controller-complete.tga" />
+    <None Include="GameData\SmartParts\Parts\Smart-Controller\smart-controller-glow.tga" />
+    <None Include="GameData\SmartParts\Parts\Valve\cloud.tga" />
+    <None Include="GameData\SmartParts\Parts\Valve\km_valve.cfg" />
+    <None Include="GameData\SmartParts\Parts\Valve\km_valve2.cfg" />
+    <None Include="GameData\SmartParts\Parts\Valve\valve-complete.tga" />
+    <None Include="GameData\SmartParts\Parts\Valve\valve.mu" />
+    <None Include="GameData\SmartParts\Parts\Valve\valve2.mu" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GameData\SmartParts\Sounds\beep.wav" />
+    <Content Include="GameData\SmartParts\Sounds\buzz.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
